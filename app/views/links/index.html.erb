@@ -1,9 +1,19 @@
-<br><br>
+<h3 class="text-center">Your Links!</h3>
 
-<div class="jumbotron text-center">
-  <% current_user.links.each do |link| %>
-    <%= link.title %> -
-    <a href="<%=link.url%>"><%= link.url %></a> -
-    Status <%= link.read %><br>
-  <% end %>
+<div class="text-center" id='create-ideas'>
+  <h4>New Link</h4>
+  <form>
+    <div class="form-group">
+      <label for="title">Link Title</label>
+      <input type="title" class="form-control" id="title-field" placeholder="title">
+    </div>
+    <div class="form-group">
+      <label for="body">Link Url</label>
+      <input type="body" class="form-control" id="url-field" placeholder="url">
+    </div>
+    <button type="submit" class="btn btn-info" id="submit-link">Submit</button>
+  </form>
+  <hr>
 </div>
+
+<div class="text-center" id="links"></div>

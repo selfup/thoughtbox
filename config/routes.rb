@@ -13,4 +13,12 @@ Rails.application.routes.draw do
   get '/links' => 'links#index'
   resources :users
 
+  namespace :api do
+    namespace :v1 do
+      resources :links, only: [:show, :index, :destroy, :update, :create], defaults: { format: 'json' } do
+
+      end
+    end
+  end
+
 end
