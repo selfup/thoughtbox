@@ -11,6 +11,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
 gem 'validate_url'
+gem 'responders'
+gem "active_model_serializers", github: "rails-api/active_model_serializers"
+gem 'sprockets', '>= 3.0.0'
+gem 'sprockets-es6'
 
 group :development, :test do
   gem 'capybara'
