@@ -8,11 +8,9 @@ class UserCanSignUpTest < ActionDispatch::IntegrationTest
 
   test "visitor visits root and then clicks signup" do
     visit "/"
-
     assert_equal "/validate", current_path
 
     click_link_or_button "Sign Up"
-
     assert_equal "/signup", current_path
   end
 
@@ -23,7 +21,7 @@ class UserCanSignUpTest < ActionDispatch::IntegrationTest
     assert_equal "/signup", current_path
 
     fill_in 'user[email_address]', with: 'wow@wow.com'
-    fill_in 'user[password_digest]', with: 'password'
+    fill_in 'user[password]', with: 'password'
     fill_in 'user[password_confirmation]', with: 'password'
     click_button 'Submit'
   end
@@ -47,9 +45,15 @@ class UserCanSignUpTest < ActionDispatch::IntegrationTest
     click_link_or_button "Sign Up"
     assert_equal "/signup", current_path
 
-    fill_in 'user[email_address]', with: 'noice@nice.com'
+    fill_in 'user[email_address]', with: 'nice@nice.com'
     fill_in 'user[password]', with: 'password'
     fill_in 'user[password_confirmation]', with: 'password'
+
+    assert_equal "/signup", current_path
+    click_button 'Submit'
+    assert_equal "/", current_path
+
+    click_link_or_button "Logout"
   end
 
 end
