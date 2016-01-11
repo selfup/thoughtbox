@@ -1,0 +1,9 @@
+<br><br>
+
+<div class="jumbotron text-center">
+  <% current_user.links.each do |link| %>
+    <%= link.title %> -
+    <a href="<%=link.url%>"><%= link.url %></a> -
+    Status <%= link.read %><br>
+  <% end %>
+</div>
