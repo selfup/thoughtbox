@@ -1,0 +1,13 @@
+<br><br>
+<div class="jumbotron text-center">
+  <h2>Signup!</h2>
+  <hr>
+  <%= form_for :user, url: '/users' do |f| %>
+
+    <h4>Email: <br><%= f.text_field :email_address %></h4><br>
+    <h4>Password: <br><%= f.password_field :password %></h4><br>
+    <h4>Password Confirmation: <br><%= f.password_field :password_confirmation %></h4><br>
+    <%= f.submit "Submit", class: "btn btn-danger" %>
+
+  <% end %>
+</div>

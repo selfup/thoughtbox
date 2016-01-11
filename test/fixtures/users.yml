@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email_address: MyString
-  password: MyString
-  password_confirmation: MyString
+  id: 1
+  email_address: wow@wow.com
+  password_digest: $2a$10$.rNANMFkCTFFiXUvMwIoguOvEPUmkFKG2sF5KB8IA9VJj1tD3CzKG
 
 two:
-  email_address: MyString
-  password: MyString
-  password_confirmation: MyString
+  id: 2
+  email_address: wowza@wowza.com
+  password_digest: $2a$10$.rNANMFkCTFFiXUvMwIoguOvEPUmkFKG2sF5KB8IA9VJj1tD3CzKG
